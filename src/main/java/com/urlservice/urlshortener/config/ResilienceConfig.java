@@ -1,8 +1,5 @@
 package com.urlservice.urlshortener.config;
 
-
-
-import io.github.resilience4j.ratelimiter.RateLimiter;
 import io.github.resilience4j.ratelimiter.RateLimiterConfig;
 import io.github.resilience4j.ratelimiter.RateLimiterRegistry;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +18,6 @@ public class ResilienceConfig {
                 .timeoutDuration(Duration.ofMillis(100)) // Time to wait for a permit to become available
                 .build();
 
-//        return RateLimiter.of("myRateLimiter", config);
         return config;
     }
 
